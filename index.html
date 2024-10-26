@@ -1,0 +1,187 @@
+<!-- TODO 1: Create the HTML Boilerplate -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        .test {
+           font-family: "Roboto Mono", monospace;
+           font-optical-sizing: auto;
+           font-weight: 400;
+           font-style: italic;
+        }
+
+        .nav-link {
+           font-family: "Roboto Mono", monospace;
+           font-optical-sizing: auto;
+           font-weight: 300;
+           font-style: normal;
+        }
+
+        .mb-0 {
+            font-family: "Roboto Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        #myCarousel {
+            font-family: "Roboto Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .carousel-item {
+            height: 40vh;
+        }
+
+        .image-div-test {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            /* align-items: center; */
+        }
+        .image-test {
+            align-self: center;
+        }
+    </style>
+    <title>Alain's Webpage</title>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
+            <img src="./laptop-icon.png" alt="Laptop" width="30px"/>
+            <!-- <a href="."><img src="./laptop-icon.png" alt="Laptop" width="40px"/></a> -->
+            <!-- Following line is to add a space between the logo and my name I added an 'a' and made it's color white-->
+            <span style="color: white;">a</span>
+            <span class="fs-3 test">Alain Fathalla</span>
+            </a>
+
+            <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="container">
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item">
+                <div class="image-div-test"><a href="./11.2 Bootstrap Components/index.html"><img class="image-test" src="./11.2 Bootstrap Components/moving-van.jpg" width="100%"/></a></div>
+                <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg> -->
+                <div class="container">
+                  <div class="carousel-caption text-start">
+                    <h1>Move It.</h1>
+                    <p class="opacity-75">Moving can't be easier.</p>
+                    <p><a class="btn btn-lg btn-primary" href="./11.2 Bootstrap Components/index.html">Get a quote</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Some representative placeholder content for the second slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                <div class="container">
+                  <div class="carousel-caption text-end">
+                    <h1>One more for good measure.</h1>
+                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+
+
+    <!-- <h1>Alain Fathalla's Portfolio</h1>
+
+    <h2>I'm a Web Developer</h2>
+
+    <hr />
+    <h3><a href="./public/movie-ranking.html">Movie Ranking Project</a></h3>
+    <a href="./public/movie-ranking.html"><img src="./assets/images/movie-ranking.png" height="200" alt="Movie ranking project preview"/></a>
+
+    <h3><a href="./public/birthday-invite.html">Birthday Invite Project</a></h3>
+    <a href="./public/birthday-invite.html"><img src="./assets/images/birthday-invite.png" height="200" alt="Birthday invite project preview"/></a>
+
+    <hr />
+    <a href="./public/about.html">About Me</a>
+    <a href="./public/contact.html">Contact Me</a> -->
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-body-secondary">© 2024 Alain Fathalla, Inc</p>
+      
+          <!-- <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a> -->
+
+          <!-- <p>💻</p> -->
+          <a href="."><img src="./laptop-icon.png" alt="Laptop" width="40px"/></a>
+          <!-- <svg>"./image2vector.svg"</svg> -->
+
+      
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Projects</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+          </ul>
+        </footer>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
+
+<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
+
+<!-- TODO 4: Add titles/subtitles etc. -->
+
+<!-- TODO 5: Add a link to the project pages -->
+
+<!-- TODO 6: Add images to show the project previews
+HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
+
+<!-- TODO 7: Add the Contact Me and About Me page links -->
