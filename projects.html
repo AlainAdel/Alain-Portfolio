@@ -70,21 +70,48 @@
             font-optical-sizing: auto;
             font-style: italic;
             display: grid;
-            grid-template: repeat(5, 200px) / repeat(2, 200px);
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             justify-content: space-evenly;
+            padding: 0;
         }
 
         .projects-grid li {
             border: black 2px solid;
             text-align: center;
             position: relative;
+            overflow: hidden;
+            background-color: #f8f9fa;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .project-preview {
-            position: absolute;
-            right: -266px;
-            clip: rect(0, 200px, 200px, 0)
+        .projects-grid li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .projects-grid li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: black;
+            position: relative;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-title {
+            padding: 15px;
+            font-weight: 500;
+            background-color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            z-index: 1;
         }
 
     </style>
@@ -103,8 +130,8 @@
             </a>
 
             <ul class="nav nav-pills">
-            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="projects.html" class="nav-link active" aria-current="page">Projects</a></li>
             <li class="nav-item"><a href="https://github.com/AlainAdel" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
               <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
             </svg> GitHub</a></li>
@@ -121,17 +148,66 @@
 
     <div class="container">
         <ul class="projects-grid">
-            <!-- <li><img class="project-preview" src="11.2 Bootstrap Components/moving-van.jpg" alt="moving van" height="100%"/></li> -->
-            <li><a href="11.2 Bootstrap Components/index.html">Move It</a></li>
-            <li><a href="10.3 Mondrian Project/index.html">Mondrian Project</a></li>
-            <li><a href="9.4 Flexbox Pricing Table Project/index.html">Pricing Table</a></li>
-            <li><a href="8.4 Web Design Agency Project/index.html">Web Design Agency</a></li>
-            <li><a href="7.3 CSS Flag Project/index.html">CSS Flag</a></li>
-            <li><a href="6.4 Motivation Meme Project/index.html">Motivation Meme</a></li>
-            <li><a href="5.4 Color Vocab Project/index.html">Color Vocab</a></li>
-            <li><a href="4.3 HTML Porfolio Project/index.html">HTML Portfolio</a></li>
-            <li><a href="3.4 Birthday Invite Project/index.html">Birthday Invite</a></li>
-            <li><a href="2.4 Movie Ranking Project/index.html">Movie Ranking</a></li>
+            <li>
+                <a href="11.2 Bootstrap Components/index.html">
+                    <img class="project-image" src="11.2 Bootstrap Components/moving-van.jpg" alt="Move It"/>
+                    <div class="project-title">Move It</div>
+                </a>
+            </li>
+            <li>
+                <a href="10.3 Mondrian Project/index.html">
+                    <img class="project-image" src="10.3 Mondrian Project/art.png" alt="Mondrian Project"/>
+                    <div class="project-title">Mondrian Project</div>
+                </a>
+            </li>
+            <li>
+                <a href="9.4 Flexbox Pricing Table Project/index.html">
+                    <img class="project-image" src="9.4 Flexbox Pricing Table Project/goal-large.png" alt="Pricing Table"/>
+                    <div class="project-title">Pricing Table</div>
+                </a>
+            </li>
+            <li>
+                <a href="8.4 Web Design Agency Project/index.html">
+                    <img class="project-image" src="8.4 Web Design Agency Project/assets/images/beautiful.jpg" alt="Web Design Agency"/>
+                    <div class="project-title">Web Design Agency</div>
+                </a>
+            </li>
+            <li>
+                <a href="7.3 CSS Flag Project/index.html">
+                    <img class="project-image" src="7.3 CSS Flag Project/goal.png" alt="CSS Flag"/>
+                    <div class="project-title">CSS Flag</div>
+                </a>
+            </li>
+            <li>
+                <a href="6.4 Motivation Meme Project/index.html">
+                    <img class="project-image" src="6.4 Motivation Meme Project/goal.png" alt="Motivation Meme"/>
+                    <div class="project-title">Motivation Meme</div>
+                </a>
+            </li>
+            <li>
+                <a href="5.4 Color Vocab Project/index.html">
+                    <img class="project-image" src="5.4 Color Vocab Project/goal.png" alt="Color Vocab"/>
+                    <div class="project-title">Color Vocab</div>
+                </a>
+            </li>
+            <li>
+                <a href="4.3 HTML Porfolio Project/index.html">
+                    <img class="project-image" src="4.3 HTML Porfolio Project/goal.png" alt="HTML Portfolio"/>
+                    <div class="project-title">HTML Portfolio</div>
+                </a>
+            </li>
+            <li>
+                <a href="3.4 Birthday Invite Project/index.html">
+                    <img class="project-image" src="3.4 Birthday Invite Project/goal.png" alt="Birthday Invite"/>
+                    <div class="project-title">Birthday Invite</div>
+                </a>
+            </li>
+            <li>
+                <a href="2.4 Movie Ranking Project/index.html">
+                    <img class="project-image" src="2.4 Movie Ranking Project/goal.png" alt="Movie Ranking"/>
+                    <div class="project-title">Movie Ranking</div>
+                </a>
+            </li>
         </ul>
     </div>
 
